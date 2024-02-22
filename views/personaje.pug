@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1= title
+  .card(style='width: 20rem;')
+    img.card-img-top(src=personaje.image, alt=personaje.name)
+    .card-body
+      h5.card-title= personaje.name
+      p.card-text Género: #{personaje.gender}
+      p.card-text Fecha de creación: #{personaje.created}
+    a(href=`/download/${personaje._id}`) Descargar JSON
+    a(href='/') Lista completa
